@@ -41,14 +41,21 @@
 # print(x)
 
 ###########product two numbers#############
-def pro(x,y):
-    if y == 0:
+# def pro(x,y):
+#     if y == 0:
+#         return 0
+#     elif  y<0:
+#         return -pro(x,-y)
+#     else:
+#         return x+pro(x,y-1)
+    
+# x = pro(5,-3)
+# print(x)
+    
+############length of string###################
+def length(str):
+    if str == "":
         return 0
-    elif  y<0:
-        return -pro(x,-y)
-    else:
-        return x+pro(x,y-1)
-    
-x = pro(5,-3)
-print(x)
-    
+    return 1 + length(str[1:])
+str = "prasanna"
+print("the ;ength of ", str)
