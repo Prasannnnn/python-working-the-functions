@@ -53,9 +53,22 @@
 # print(x)
     
 ############length of string###################
-def length(str):
-    if str == "":
-        return 0
-    return 1 + length(str[1:])
-str = "prasanna"
-print("the length of ", str)
+# def length(str):
+#     if str == "":
+#         return 0
+#     return 1 + length(str[1:])
+# str = "prasanna"
+# print("the length of ", str)
+
+
+#############tri recursion######################
+# def tri_recursion(k):
+#   if(k > 0):
+#     result = k + tri_recursion(k - 1)
+#     print(result)
+#   else:
+#     result = 0
+#   return result
+
+# print("\n\nRecursion Example Results")
+# tri_recursion(6)
