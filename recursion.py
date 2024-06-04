@@ -77,14 +77,44 @@
 
 #####################lambda###########
 #lambda arguments:expression
-x = lambda a : a + 10
-print(x(5))
+# x = lambda a : a + 10
+# print(x(5))
 
 #Multiply argument a with argument b and return the result
 
-x = lambda a, b : a * b
-print(x(5,6))
+# x = lambda a, b : a * b
+# print(x(5,6))
 
 
-x= lambda a,b,c : a + b + c
-print(x(5,6,2))
+# x= lambda a,b,c : a + b + c
+# print(x(5,6,2))
+
+#prime number
+# def is_prime(n,i=2):
+#     if n <=2:
+#         return n==2
+#     if n % i == 0:
+#         return False
+#     if i*i>n:
+#         return True
+    
+#     return is_prime(n,i+1)
+# n=float(input())
+# print(is_prime(n))
+
+
+#Class and Objects
+class x:
+    def __init__(self,name,age) -> None:
+        self.name=name
+        self.age = age
+#The __str__() Function
+# The __str__() function controls what should be returned when the class object is represented as a string.
+
+# If the __str__() function is not set, the string representation of the object is returned
+    def __str__(self) -> str:
+        return f"{self.name}({self.age})"
+
+
+y = x("Hema",24)
+print(y)
