@@ -305,3 +305,127 @@ V - fixed chunk of memory for other type ( void )
 
 
 '''
+
+
+# import numpy as np
+
+# arr = np.array(['apple', 'banana', 'cherry'])
+
+# print(arr.dtype)
+
+
+'''
+Creating Arrays With a Defined Data Type
+We use the array() function to create arrays, 
+this function can take an optional argument: dtype 
+that allows us to define the expected data type of the array elements:
+'''
+
+# import numpy as np
+
+# arr = np.array([1, 2, 3, 4], dtype='S')
+
+# print(arr)
+# print(arr.dtype)
+
+# import numpy as np
+
+# arr = np.array([1, 2, 3, 4], dtype='i4')
+
+# print(arr)
+# print(arr.dtype)
+
+'''
+Random Numbers in Numpy
+
+Random number does NOT mean a different number every time. 
+Random means something that can not be predicted logically.
+'''
+
+'''
+Generate Random Number
+NumPy offers the random module to work with random numbers.
+'''
+
+# from numpy import random
+
+# x = random.randint(100)
+
+# print(x)
+
+'''
+Generate Random Float
+The random module's rand() method returns a random float between 0 and 1.
+
+Generate a random float from 0 to 1:
+# '''
+# from numpy import random
+
+# x = random.rand()
+
+# print(x)
+
+'''
+Generate Random Array
+In NumPy we work with arrays, and you can use the two methods from the above examples to make random arrays.
+
+Integers
+The randint() method takes a size parameter where you can specify the shape of an array.
+
+Example
+Generate a 1-D array containing 5 random integers from 0 to 100:
+'''
+# from numpy import random
+
+# x=random.randint(100, size=(5))
+
+# print(x)
+
+'''
+generate a 2-D array with 3 rows, each row containing 5 random integers from 0 to 100:
+'''
+# from numpy import random
+
+# x = random.randint(100, size=(3, 5))
+
+# print(x)
+
+'''
+Floats
+The rand() method also allows you to specify the shape of the array.
+
+Example
+Generate a 1-D array containing 5 random floats:
+'''
+# from numpy import random
+
+# x = random.rand(5)
+
+# print(x)
+
+'''
+Generate Random Number From Array
+The choice() method allows you to generate a random value based on an array of values.
+
+The choice() method takes an array as a parameter and randomly returns one of the values.
+'''
+
+# from numpy import random
+
+# x = random.choice([3, 5, 7, 9])
+
+# print(x)
+
+
+
+'''
+The choice() method also allows you to return an array of values.
+
+Add a size parameter to specify the shape of the array.
+
+'''
+# from numpy import random
+
+# x = random.choice([3, 5, 7, 9], size=(3, 5))
+
+# print(x)
