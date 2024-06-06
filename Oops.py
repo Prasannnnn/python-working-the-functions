@@ -72,25 +72,54 @@ Display all books in the library.
     
 #     library.display_books()
 
-    
 class Book:
-    def __init__(self,book,author,isbn) -> None:
-        self.book = book
+    def __init__(self, title, author, isbn):
+        self.title = title
         self.author = author
         self.isbn = isbn
+    
+    def __str__(self):
+        return f"Title: {self.title}, Author: {self.author}, ISBN: {self.isbn}"
+
 class Library:
-    def __init__(self) -> None:
-        self.books =[]
+    def __init__(self):
+        self.books = []
 
-    def add_book(self,book):
+    def add_book(self, book):
         self.books.append(book)
-        print(book)
+        print(f"Book '{book.title}' added to the library.")
 
+    def remove_book(self, isbn):
+        for book in self.books:
+            if book.isbn == isbn:
+                self.books.remove(book)
+                print(f"Book with ISBN '{isbn}' removed from the library.")
+                return
+        print(f"No book found with ISBN '{isbn}'.")
 
-book = Book("Haf Girlfirend","Chetan Bhagat","9876543210")
-book1 = Book("Five points to do","Chetan Bhagat","321654987")
-book2 = Book("Call Center","chetan Bhagat","789456123")
+    def display_books(self):
+        if not self.books:
+            print("The library has no books.")
+        else:
+            print("Books in the library:")
+            for book in self.books:
+                print(book)
 
-library=Library()
-library.add_book(book)
-
+# Example usage
+if __name__ == "__main__":
+    library = Library()
+    
+    book = Book("Half Girlfriend", "Chetan Bhagat", "9876543210")
+    book1 = Book("Five Point Someone", "Chetan Bhagat", "321654987")
+    book2 = Book("One Night @ the Call Center", "Chetan Bhagat", "789456123")
+    
+    library.add_book(book)
+    library.add_book(book1)
+    library.add_book(book2)
+    
+    library.display_books()
+    
+    print("\nRemoving book with ISBN '321654987':")
+    library.remove_book("321654987")
+    
+    library.display_books()
