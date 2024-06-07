@@ -23,6 +23,10 @@ class Student:
     @classmethod
     def info(cls):
         return cls.school
+    
+    @staticmethod
+    def infor():
+        print("the statement is printing")
 
 stu = Student(98,78,89)
 mah = Student(89,54,64)
@@ -39,3 +43,4 @@ print(stu.set())
 print(stu.maths)
 
 print(Student.info())
+print(Student.infor())
