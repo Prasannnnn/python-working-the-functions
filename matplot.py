@@ -887,3 +887,288 @@ plt.scatter(x, y, c=colors, s=sizes, alpha=0.5, cmap='nipy_spectral')
 plt.colorbar()
 
 
+'''
+Matplotlib Bars
+Creating Bars
+With Pyplot, you can use the bar() function to draw bar graphs:
+
+ExampleGet your own Python Server
+Draw 4 bars:
+
+
+
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x,y)
+plt.show()
+
+'''
+Horizontal Bars
+If you want the bars to be displayed horizontally instead of vertically, use the barh() function:
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.barh(x, y)
+plt.show()
+
+'''
+Bar Color
+The bar() and barh() take the keyword argument color to set the color of the bars:
+
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x, y, color = "red")
+plt.show()
+
+'''
+Color Names
+You can use any of the color names.
+
+Example
+Draw 4 "hot pink" bars:
+
+
+'''
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x, y, color = "hotpink")
+plt.show()
+
+'''
+Color Hex
+Or you can use Hexadecimal color values:
+
+Example
+Draw 4 bars with a beautiful green color:
+
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x, y, color = "#4CAF50")
+plt.show()
+
+'''
+Bar Width
+The bar() takes the keyword argument width to set the width of the bars:
+
+Example
+Draw 4 very thin bars:
+
+
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x, y, width = 0.1)
+plt.show()
+
+'''
+Bar Height
+The barh() takes the keyword argument height to set the height of the bars:
+
+Example
+Draw 4 very thin bars:
+
+
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.barh(x, y, height = 0.1)
+plt.show()
+
+
+'''
+Matplotlib Histograms
+Histogram
+A histogram is a graph showing frequency distributions.
+
+It is a graph showing the number of observations within each given interval.
+
+Example: Say you ask for the height of 250 people, you might end up with a histogram like this:
+'''
+
+'''
+Create Histogram
+In Matplotlib, we use the hist() function to create histograms.
+
+The hist() function will use an array of numbers to create a histogram, the array is sent into the function as an argument.
+
+For simplicity we use NumPy to randomly generate an array with 250 values, where the values will concentrate around 170, and the standard deviation is 10.
+'''
+
+import numpy as np
+
+x = np.random.normal(170, 10, 250)
+
+print(x)
+
+'''
+The hist() function will read the array and produce a histogram:
+
+Example
+A simple histogram:
+
+
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.normal(170, 10, 250)
+
+plt.hist(x)
+plt.show() 
+
+'''
+Matplotlib Pie Charts
+Creating Pie Charts
+With Pyplot, you can use the pie() function to draw pie charts:
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+
+plt.pie(y)
+plt.show() 
+
+'''
+Labels
+Add labels to the pie chart with the labels parameter.
+
+The labels parameter must be an array with one label for each wedge:
+
+Example
+A simple pie chart:
+
+
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels = mylabels)
+plt.show() 
+
+
+'''
+Example
+Start the first wedge at 90 degrees:
+
+
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels = mylabels, startangle = 90)
+plt.show() 
+
+'''
+Explode
+Maybe you want one of the wedges to stand out? The explode parameter allows you to do that.
+
+The explode parameter, if specified, and not None, must be an array with one value for each wedge.
+
+Each value represents how far from the center each wedge is displayed:
+
+Example
+Pull the "Apples" wedge 0.2 from the center of the pie:
+
+
+'''
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+myexplode = [0.2, 0, 0, 0]
+
+plt.pie(y, labels = mylabels, explode = myexplode)
+plt.show() 
+
+
+'''
+Shadow
+Add a shadow to the pie chart by setting the shadows parameter to True:
+
+Example
+Add a shadow:
+
+
+'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+myexplode = [0.2, 0, 0, 0]
+
+plt.pie(y, labels = mylabels, explode = myexplode, shadow = True)
+plt.show() 
+
+
+'''
+Colors
+You can set the color of each wedge with the colors parameter.
+
+The colors parameter, if specified, must be an array with one value for each wedge:
+
+Example
+Specify a new color for each wedge:
+
+'''
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+mycolors = ["black", "hotpink", "b", "#4CAF50"]
+
+plt.pie(y, labels = mylabels, colors = mycolors)
+plt.show() 
