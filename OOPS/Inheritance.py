@@ -120,4 +120,4 @@ class C(B,A):
 
 a = C()
 
-a.feature()
+a.britania()
