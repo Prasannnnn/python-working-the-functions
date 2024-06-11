@@ -1,0 +1,9 @@
+C:\Users\Prasanna>python -m venv i
+
+PS C:\Users\Prasanna\Intern\Python> i\scripts\activate
+(i) PS C:\Users\Prasanna\Intern\Python> pip install tk
+Requirement already satisfied: tk in c:\users\prasanna\intern\python\i\lib\site-packages (0.1.0)
+
+[notice] A new release of pip available: 22.3.1 -> 24.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(i) PS C:\Users\Prasanna\Intern\Python> 
