@@ -12,10 +12,10 @@ a.geometry('300x250')
 
 Label(a,text="will you accept me").pack()
 
-Button(root,text="yes",command=root.destroy).pack()
+Button(a,text="yes",command=a.destroy).pack()
  
 # Creating a Button
-btn = Button(root, text = 'No')
+btn = Button(a, text = 'No')
 btn.pack()
  
 # Defining method on click
@@ -29,4 +29,4 @@ def Clicked(event):
 btn.bind("<Button-1>" ,Clicked)
 btn.pack()
  
-root.mainloop()
+a.mainloop()
