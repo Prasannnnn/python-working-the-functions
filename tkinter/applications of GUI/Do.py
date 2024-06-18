@@ -1,4 +1,3 @@
-from tkinter import *
 import tkinter as tk
 from tkinter import messagebox, filedialog
 from pytube import YouTube
@@ -6,33 +5,32 @@ from pytube.exceptions import VideoUnavailable
 
 def widgets():
     # Header Label
-    b = Label(a, text="YouTube Video Downloader", padx=15, pady=15, font=("Times New Roman", 12, "bold"), bg="purple", fg="white")
-    b.grid(row=1, column=1, padx=10, columnspan=3)
+    header_label = tk.Label(a, text="YouTube Video Downloader", padx=15, pady=15, font=("Times New Roman", 12, "bold"), bg="purple", fg="white")
+    header_label.grid(row=1, column=1, padx=10, columnspan=3)
     
     # Link Label
-    c = Label(a, text="YouTube Link", padx=15, pady=15, font=("Times New Roman", 12, "bold"), bg="purple", fg="brown")
-    c.grid(row=2, column=0, padx=5, pady=5)
+    link_label = tk.Label(a, text="YouTube Link", padx=15, pady=15, font=("Times New Roman", 12, "bold"), bg="purple", fg="brown")
+    link_label.grid(row=2, column=0, padx=5, pady=5)
     
     # Download path Label
-    d = Label(a, text="Download Path", padx=9, pady=5, font=("Times New Roman", 12, "bold"), bg="purple",
-        fg="blue")
-    d.grid(row=3, column=0, padx=9, pady=5)
+    path_label = tk.Label(a, text="Download Path", padx=9, pady=5, font=("Times New Roman", 12, "bold"), bg="purple", fg="blue")
+    path_label.grid(row=3, column=0, padx=9, pady=5)
     
     # Entry field for link label
-    a.linkText = Entry(a, width=35, textvariable=video_link, font="Cambria 14")
+    a.linkText = tk.Entry(a, width=35, textvariable=video_link, font="Cambria 14")
     a.linkText.grid(row=2, column=1, padx=5, pady=5, columnspan=2)
     
     # Entry field for Download path
-    a.destinationText = Entry(a, width=27, textvariable=download_path, font=("Cambria 14"))
+    a.destinationText = tk.Entry(a, width=27, textvariable=download_path, font=("Cambria 14"))
     a.destinationText.grid(row=3, column=1, padx=5, pady=5)
     
     # Browse the directory
-    e = Button(a, text="Browse", command=Browse, width=10, bg="bisque", relief=GROOVE)
-    e.grid(row=3, column=2, padx=1, pady=1)
+    browse_button = tk.Button(a, text="Browse", command=Browse, width=10, bg="bisque", relief=tk.GROOVE)
+    browse_button.grid(row=3, column=2, padx=1, pady=1)
     
     # Download Button
-    f = Button(a, text="Download Video", command=Download, width=20, bg="thistle1", padx=10, pady=10, relief=GROOVE, font="Cambria 13")
-    f.grid(row=4, column=1, padx=20, pady=20)
+    download_button = tk.Button(a, text="Download Video", command=Download, width=20, bg="thistle1", padx=10, pady=10, relief=tk.GROOVE, font="Cambria 13")
+    download_button.grid(row=4, column=1, padx=20, pady=20)
 
 def Browse():
     # To browse the folders and select the folder path
@@ -62,14 +60,19 @@ def Download():
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred: {e}")
 
+# Main window
 a = tk.Tk()
 a.geometry("720x520")
 a.resizable(False, False)
 a.title("YouTube Downloader")
 a.config(bg="purple")
 
-video_link = StringVar()
-download_path = StringVar()
+# Variables
+video_link = tk.StringVar()
+download_path = tk.StringVar()
 
+# Initialize widgets
 widgets()
+
+# Start the GUI event loop
 a.mainloop()
