@@ -22,11 +22,11 @@ def checkwinner():
     elif(but1['text'] == "O" and but2['text'] == "O" and but3['text'] == "O" or
         but4['text'] == "O" and but5['text'] == "O" and but6['text'] == "O" or
         but7['text'] == "O" and but8['text'] == "O" and but9['text'] == "O" or
-        but1['text'] == "O" and but4 == "O" and but7 == "O" or
-        but2 == "O" and but5 == "O" and but8 == "O" or
-        but3 == "O" and but6 == "O" and but9 == "O" or
-        but1 == "O" and but5 == "O" and but9 == "O" or
-        but3 == "O" and but5 == "O" and but7 == "O" ):
+        but1['text'] == "O" and but4['text'] == "O" and but7['text'] == "O" or
+        but2['text'] == "O" and but5['text'] == "O" and but8['text'] == "O" or
+        but3['text'] == "O" and but6['text'] == "O" and but9['text'] == "O" or
+        but1['text'] == "O" and but5['text'] == "O" and but9['text'] == "O" or
+        but3['text'] == "O" and but5['text'] == "O" and but7['text'] == "O" ):
         messagebox.showinfo("Winner","Player 2 Wins O")
 
 
@@ -124,5 +124,5 @@ def buttonpress(ButtonNumber):
         but9.config(text="O")
         player = 1
 
-checkwinner()
+    checkwinner()
 a.mainloop()
