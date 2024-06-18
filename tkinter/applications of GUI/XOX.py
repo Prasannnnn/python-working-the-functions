@@ -1,12 +1,34 @@
 from tkinter import *
 
 import tkinter as ttk
+from tkinter import messagebox
 
 a = Tk()
 
 a.title("XOX Game")
 
 a.geometry("345x375")
+
+def checkwinner():
+    if (but1['text'] == "X" and but2['text'] == "X" and but3['text'] == "X" or
+        but4['text'] == "X" and but5['text'] == "X" and but6['text'] == "X" or
+        but7['text'] == "X" and but8['text'] == "X" and but9['text'] == "X" or
+        but1['text'] == "X" and but4['text'] == "X" and but7['text'] == "X" or
+        but2['text'] == "X" and but5['text'] == "X" and but8['text'] == "X" or
+        but3['text'] == "X" and but6['text'] == "X" and but9['text'] == "X" or
+        but1['text'] == "X" and but5['text'] == "X" and but9['text'] == "X" or
+        but3['text'] == "X" and but5['text'] == "X" and but7['text'] == "X" ):
+        messagebox.showinfo("Winner","Player 1 Wins X")
+    elif(but1['text'] == "O" and but2['text'] == "O" and but3['text'] == "O" or
+        but4['text'] == "O" and but5['text'] == "O" and but6['text'] == "O" or
+        but7['text'] == "O" and but8['text'] == "O" and but9['text'] == "O" or
+        but1['text'] == "O" and but4 == "O" and but7 == "O" or
+        but2 == "O" and but5 == "O" and but8 == "O" or
+        but3 == "O" and but6 == "O" and but9 == "O" or
+        but1 == "O" and but5 == "O" and but9 == "O" or
+        but3 == "O" and but5 == "O" and but7 == "O" ):
+        messagebox.showinfo("Winner","Player 2 Wins O")
+
 
 but1 = ttk.Button(a,text="  ",command=lambda:buttonpress(1))
 but1.grid(row=0,column=0,ipadx=50,ipady=50)
@@ -101,4 +123,6 @@ def buttonpress(ButtonNumber):
     elif ButtonNumber == 9 and player == 2:
         but9.config(text="O")
         player = 1
+
+checkwinner()
 a.mainloop()
