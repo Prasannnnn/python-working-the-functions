@@ -18,4 +18,11 @@ There are four different methods (modes) for opening a file:
 
 "x" - Create - Creates the specified file, returns an error if the file exists
 
+
+In addition you can specify if the file should be handled as binary or text mode
+
+"t" - Text - Default value. Text mode
+
+"b" - Binary - Binary mode (e.g. images)
+
 '''
