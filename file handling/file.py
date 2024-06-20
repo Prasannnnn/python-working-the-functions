@@ -1,0 +1,5 @@
+'''
+File handling is an important part of any web application.
+
+Python has several functions for creating, reading, updating, and deleting files.
+'''
