@@ -7,21 +7,21 @@ To write to an existing file, you must add a parameter to the open() function:
 "w" - Write - will overwrite any existing content
 '''
 
-# f = open("demo2.txt", "a")
-# f.write("Fifty shades of Grey songs!")
-# f.close()
+f = open(r"C:\Users\Prasanna\Intern\Python\python-working-the-functions\file handling\demo2.txt", "a")
+f.write("Fifty shades of Grey songs!")
+f.close()
 
-# #open and read the file after the appending:
-# f = open("demo2.txt", "r")
-# print(f.read())
+#open and read the file after the appending:
+f = open(r"C:\Users\Prasanna\Intern\Python\python-working-the-functions\file handling\demo2.txt", "r")
+print(f.read())
 
 
-f = open("demo3.txt", "w")
+f = open(r"C:\Users\Prasanna\Intern\Python\python-working-the-functions\file handling\demo3.txt", "w")
 f.write("Woops! I have deleted the content!")
 f.close()
 
 #open and read the file after the overwriting:
-f = open("demo3.txt", "r")
+f = open(r"C:\Users\Prasanna\Intern\Python\python-working-the-functions\file handling\demo3.txt", "r")
 print(f.read())
 
 '''
@@ -39,9 +39,9 @@ To create a new file in Python, use the open() method, with one of the following
 
 "w" - Write - will create a file if the specified file does not exist
 '''
-f = open("myfile.txt", "x")
-f.write("Vanakam da mapla")
-f.close()
+# f = open(r"C:\Users\Prasanna\Intern\Python\python-working-the-functions\file handling\myfile.txt", "x")
+# f.write("Vanakam da mapla")
+# f.close()
 
-f=open("myfile.txt","r")
+f=open(r"C:\Users\Prasanna\Intern\Python\python-working-the-functions\file handling\myfile.txt","r")
 print(f.read())
