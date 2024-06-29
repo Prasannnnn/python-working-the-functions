@@ -5,7 +5,7 @@ def my_decorator(func):
         print("Something is happening after the function is called.")
     return wrapper
 
-@my_decorator
+@my_decorator # @my_decorator = say_hello(my_decorator)
 def say_hello():
     print("Hello!")
 
